@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../resourse/css/style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="./jquery.min.js"></script>
+    <title>切换城市</title>
+    <script type="text/javascript" src="./ad.js"></script>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+</head>
+<style type="text/css">
+*{margin:0;padding:0;}
+    .place{
+        background-color: #fff;
+    }
+    .place ul li{
+        padding: 10px 5px;
+        border-bottom: 1px solid #dcdcdc;
+        color: #b9b9b9;
+    }
+    .city{
+        margin-top: 10px;
+    }
+    #div1 ul li a{
+        text-decoration:none;color:#333;
+    }
+    a:hover{
+        text-decoration:none; color:#333;
+   }
+</style>
+<body style="position: relative">
+
+<div class="main-top" style="background-color: #fff">
+    <div>
+        <form name="search"method="post" action="city.html">
+            <input name="submit" class="btn" type="image" value="按钮" src="../resourse/imgs/icom-map.png"/>
+            <span>定位城市：</span>
+            <span>广州</span>
+            <div class="cl"></div>
+        </form>
+    </div>
+    <div class="cl"></div>
+</div>
+<div class="cl"></div>
+
+<div style="background-color: #fff;margin-top:10px;padding: 10px 10px">
+    <div>
+        <span>全部城市</span>
+    </div>
+</div>
+
+<div class="city">
+    <span style="font-size: 24px;padding-left: 10px"><a name="A-href">A</a></span>
+
+    <div class="place">
+        <ul>
+            <li>鞍山</li>
+            <li>安阳</li>
+            <li>安庆</li>
+        </ul>
+    </div>
+</div>
+
+<div class="city">
+    <span style="font-size: 24px;padding-left: 10px">B</span>
+    <div class="place">
+        <ul>
+            <li>北京</li>
+            <li>北阳</li>
+            <li>北理</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="city">
+    <span style="font-size: 24px;padding-left: 10px">B</span>
+    <div class="place">
+        <ul>
+            <li>北京</li>
+            <li>北阳</li>
+            <li>北理</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="city">
+    <span style="font-size: 24px;padding-left: 10px">C</span>
+    <div class="place">
+        <ul>
+            <li>北京</li>
+            <li>北阳</li>
+            <li>北理</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="city">
+    <span style="font-size: 24px;padding-left: 10px">D</span>
+    <div class="place">
+        <ul>
+            <li>北京</li>
+            <li>北阳</li>
+            <li>北理</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="city">
+    <span style="font-size: 24px;padding-left: 10px">E</span>
+    <div class="place">
+        <ul>
+            <li>北京</li>
+            <li>北阳</li>
+            <li>北理</li>
+        </ul>
+
+    </div>
+</div>
+
+<div id="div1" style="top:10px;right: 0;position: absolute;background-color: #fff;padding: 0 10px">
+    <ul style="list-style-type: none">
+        <li><a href="#A-href">A</a></li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+        <li>G</li>
+        <li>H</li>
+        <li>I</li>
+        <li>J</li>
+        <li>K</li>
+        <li>L</li>
+        <li>M</li>
+        <li>N</li>
+        <li>O</li>
+        <li>P</li>
+        <li>Q</li>
+        <li>R</li>
+        <li>S</li>
+        <li>T</li>
+        <li>U</li>
+        <li>V</li>
+        <li>W</li>
+        <li>X</li>
+        <li>Y</li>
+        <li>Z</li>
+    </ul>
+</div>
+<div class="xiabianju"></div>
+
+<script>
+    var h_div1 = document.getElementById('div1');
+    var h_hvttop = 100;
+    window.onscroll = function () {
+        HoverTreeMove(h_div1, h_hvttop)
+    };
+
+
+
+    function HoverTreeMove(obj,top)
+    {
+        var h_scrollTop = document.documentElement.scrollTop || document.body.scrollTop;//滚动的距离
+        var h_buchang = 20;
+        if (obj.offsetTop < h_scrollTop + top - h_buchang)
+        {
+            obj.style.top = obj.offsetTop + h_buchang + "px";
+            setTimeout(function () { HoverTreeMove(obj, top); }, 80);
+
+        }
+        else if (obj.offsetTop > h_scrollTop + top + h_buchang)
+        {
+            obj.style.top = (obj.offsetTop - h_buchang) + "px";
+            setTimeout(function () { HoverTreeMove(obj, top); }, 80);
+        }
+        else {
+            obj.style.top = h_scrollTop + top + "px";
+        }
+    }
+
+    HoverTreeMove(h_div1, 60)
+</script>
+</body>
+</html>

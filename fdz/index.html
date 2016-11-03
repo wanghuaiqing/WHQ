@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/swipe2.js"></script>
+<script type="text/javascript" src="ad.js"></script> 
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<style type="text/css">
+    .B02012 p{
+         display:inline-block; 
+         word-break:break-word;
+         text-align:left;
+    }
+</style>
+</head>
+<body style="padding: 0;"class="bg">
+
+	<div >
+		 <div class="main_top">
+		 	  <div class="Tleft"><a href="index.html"><img src="imgs/home.png" ></a></div>
+	        复旦大学珠海校友会
+	      <div class="Tright"><img src="imgs/menu.png"></div>
+	      <div class="Tright2"><a href="search.html"><img src="imgs/sousuo.png"></a></div>
+		 </div>
+
+
+		 <div id="huadonglunbo" class="swipe">
+        <div class='swipe-wrap'>
+            <div><img src="imgs/t003.jpg" /></div>
+            <div><img src="imgs/t003.jpg" /></div>
+            <div><img src="imgs/t003.jpg" /></div>
+            <div><img src="imgs/t003.jpg" /></div>
+        </div>
+        <div class="xiaoyuandian">
+            <ul>
+                <li class="cur"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+     </div>
+     
+     <script type="text/javascript">
+        var haha = document.getElementById('huadonglunbo');
+        window.mySwipe = Swipe(
+            haha, 
+            {   
+                startSlide: 0,      //表示轮播开始的图片编号
+                auto: 2000,         //表示自动轮播的间隔
+                continuous: true,   //表示是否再来一轮
+                disableScroll: true,  //表示是否在上面阻止默认的滚轮事件，不用改
+                stopPropagation: true,   //表示是否阻止冒泡，不用改。
+                callback: function(index, element) {
+                    //写小圆点的业务
+                    $(".xiaoyuandian ul li").eq(index).addClass("cur").siblings().removeClass("cur");
+                }
+            }
+        );
+        //小圆点的点击业务
+        $(".xiaoyuandian ul li").click(
+            function(){
+                mySwipe.slide($(this).index(),1000);
+            }
+        );
+     </script>
+		 
+
+		 <div class="kuang11">
+		 	  <ul  >
+		 	  	<a href="xiehuijieshao.html"><li class="xiaokuai11">
+		 	  		<img class="huodong11" src="imgs/xiehuijieshao2.png">
+		        <div class="shuzi11">协会介绍</div>    
+		      </li></a> 
+		      
+		      <a href="huodongzhaomu.html"><li class="xiaokuai11">
+		 	  		<img class="huodong11" src="imgs/ruhuiqiye2.png">
+		        <div class="shuzi11">入会企业</div>       
+		      </li></a>
+		      
+		      <li class="xiaokuai11">
+		 	  		<img class="huodong11" src="imgs/xiehuizhangcheng.png">
+		        <div class="shuzi11">协会章程</div>  
+		      </li>
+		      
+		      <li class="xiaokuai11">
+		 	  		<img class="huodong11" src="imgs/lianxiwomen3.png">
+		        <div class="shuzi11">联系我们</div>
+		      </li>
+		      <div class="cl"></div>
+		    </ul>
+		 </div>
+		 
+		 
+		 <div>
+		 	    <div style="border-top:1px solid #cdcccc;border-bottom:1px solid #cdcccc;height:20px;background-color:#dcdcdc;"></div>
+			 	  <div style="margin:0;padding:8px 13px 3px 13px;" >	
+			 	  	  <div class="xiaobiaoti1" >协会新闻</div>
+			 	 	    <div class="xiaobiaoti2">更多>></div>
+			 	 	    <div class="cl"></div>
+			 	  </div>
+			 	  <a href="xinwenxiang.html">
+			 	  <div class="D011">
+			 	  	<a href="xinwenxiang.html">
+						  <div class="B02011">
+					       <img src="imgs/gongsilogo.jpg">
+					    </div>
+							<div class="B02012">
+								  <div style="color:1#cdcdcd;text-align:center;">校友某某的公司成功上市</div>
+								  <p>2010年1月15日 - 一般情况,默认的是写一
+								  一般情况,默认的是写一个换一行,那么如何
+								  默认的是写一个换一行,
+								 </p>
+							</div>
+							</a>
+		      </div>
+		      </a>
+		      
+		      <div class="D011">
+			 	  	<a href="xinwenxiang.html">
+						  <div class="B02011">
+					       <img src="imgs/t003.jpg">
+					    </div>
+							<div class="B02012">
+								  <div style="color:#f00;text-align:center;">9月28日 自行车活动招募</div>
+								  <p>2010年1月15日 - 一般情况,默认的是写一
+								  一般情况,默认的是写一个换一行,那么如何
+								  默认的是写一个换一行,
+								 </p>
+							</div>
+							</a>
+		      </div>
+		      
+		      <div class="D011">
+			 	  	<a href="xinwenxiang.html">
+						  <div class="B02011">
+					       <img src="imgs/t003.jpg">
+					    </div>
+							<div class="B02012">
+								  <div style="color:#f00;text-align:center;">9月28日 自行车活动招募</div>
+								  <p>2010年1月15日 - 一般情况,默认的是写一
+								  一般情况,默认的是写一个换一行,那么如何
+								  默认的是写一个换一行,fdgstsrtywyrtrre
+								 </p>
+							</div>
+							</a>
+		      </div>
+		      
+		      <div class="D011">
+			 	  	<a href="xinwenxiang.html">
+						  <div class="B02011">
+					       <img src="imgs/t003.jpg">
+					    </div>
+							<div class="B02012">
+								  <div style="color:#f00;text-align:center;">9月28日 自行车活动招募</div>
+								  <p>2010年1月15日 - 一般情况,默认的是写一
+								  一般情况,默认的是写一个换一行,那么如何
+								  默认的是写一个换一行,
+								 </p>
+							</div>
+							</a>
+		      </div>
+		      
+		      
+		      
+		     
+		      
+		      
+		      
+		      
+		      
+		      
+		      
+		 	</div>  	     	
+
+
+
+		<div  class="main_right" >
+		  <div class="main_right_menu">
+				
+				
+				<a href="gerenzhongxin.html"><div class="touxiang10"><img class="tupian10" src="imgs/31.jpeg"></div></a>
+		 	  <div class="kuang">
+		 	  	 	  <ul  >
+		 	  	 	  	<a href="xiehuijieshao.html">
+		 	  	 	  	<li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuijieshao2.png">
+		 	  	        <div>协会介绍</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/ruhuiqiye2.png">
+		 	  	        <div>入会企业</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuizhangcheng.png">
+		 	  	        <div>协会章程</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+                <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/ruhuiqiye2.png">
+		 	  	        <div>入会企业</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuizhangcheng.png">
+		 	  	        <div>协会章程</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+
+		 	  	      
+		 	  	     
+		 	  	      
+		 	  	 	  </ul>
+		 	  	
+		 	  	 <div style="clear:both"></div>
+		 	  </div>	
+				
+				
+		  </div>
+		  <div class="main_right_bg"></div>
+		</div> 
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		
+		$(".main_right_bg").click(function(){
+					$(".main_right").hide(200);
+				});
+		$(".Tright").click(function(){
+					$(".main_right").show(200);
+				});
+		$(function () {
+					$(window).scroll(function(){
+						if ($(window).scrollTop()>60){
+							$(".main_top").fadeOut(200);
+						}
+						else
+						{
+							$(".main_top").fadeIn(200);
+						}
+				});
+		});
+	}); 
+</script>  
+     			    
+										
+										
+										
+     
+     
+         <div style="margin-top:50px;"></div>
+         <a href="yundongtai.html">
+		 <div class="mohuceng4">
+              <div class="yunlogo"><img src="imgs/yun1.png"style="vertical-align:middle;">&nbsp;云动态:</div>
+              <marquee class="yunmessage" behavior="scroll" scrollamount="3"  loop="-1"  > 云动态云动态云动态</marquee>
+         </div>
+         </a>
+	</div>
+</body>
+</html>

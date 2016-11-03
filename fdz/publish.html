@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>发表动态</title>
+
+<link rel="stylesheet" href="css/weui.css"/>
+<script src="../resourse/js/jquery-1.5.2.js"></script>
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<style>
+  a{text-decoration:none;}
+  .yanlun{
+           box-sizing: border-box;
+           width:100%;
+           border:0px;
+           border-bottom:1px solid #dcdcdc;
+           padding:10px;
+           height:150px; 
+
+  }
+.btn{
+     background-color:orange;
+     border:0px;
+     padding:10px;
+     border-radius:5px;
+     width:60%;
+     color:#ed7d04;
+
+
+}
+</style>
+</head>
+<body>
+       
+        <form name="comment" method="post" action="#">
+            <div >
+                <textarea  class="yanlun"name="txt"wrap=physical;size="100"placeholder="请输入内容……"></textarea>    
+            </div>
+
+            <div class="weui_uploader_bd" style="margin-right: 0px;padding:5px;">
+                            <ul class="weui_uploader_files">
+                                <li class="weui_uploader_file" style="background-image:url(imgs/31.jpeg)"></li>
+                                <li class="weui_uploader_file" style="background-image:url(imgs/31.jpeg)"></li>
+                                <li class="weui_uploader_file" style="background-image:url(imgs/31.jpeg)"></li>
+                                <li class="weui_uploader_file weui_uploader_status" style="background-image:url(imgs/31.jpeg)">
+                                    <div class="weui_uploader_status_content">
+                                        <i class="weui_icon_warn"></i>
+                                    </div>
+                                </li>
+                                <li class="weui_uploader_file weui_uploader_status" style="background-image:url(imgs/31.jpeg)">
+                                    <div class="weui_uploader_status_content">50%</div>
+                                </li>
+                            </ul>
+                            <div class="weui_uploader_input_wrp">
+                                <input class="weui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple />
+                            </div>
+                        </div>
+            <div style="text-align:center;">
+                     <input class="btn" type="submit" value="提交"/> 
+            </div>	
+        </form>
+            
+</body>
+
+
+</html>

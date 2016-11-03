@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="../resourse/css/style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>看房日程</title>
+<link rel="stylesheet" href="../resourse/css/weui.css"/>
+<script src="../resourse/js/jquery-1.5.2.js"></script>
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<style>a{text-decoration:none;}</style>
+</head>
+<body>
+       
+        <form name="comment" method="post" action="#">
+            <div class="feedbackall">
+                <textarea name="txt"class="feedbacktext"wrap=physical;size="10"placeholder="请输入内容……"></textarea>
+                <div>
+                    <div style="float:left;">星级：</div>
+                    <div id="stars" style="float:right;">
+                        <a href="javascript:;"><img src="../resourse/imgs/star1.png" style="width: 20px;height: 18px;margin-right: 8px;"/></a>
+                        <a href="javascript:;"><img src="../resourse/imgs/star1.png" style="width: 20px;height: 18px;margin-right: 8px;"/></a>
+                        <a href="javascript:;"><img src="../resourse/imgs/star1.png" style="width: 20px;height: 18px;margin-right: 8px;"/></a>
+                        <a href="javascript:;"><img src="../resourse/imgs/star1.png" style="width: 20px;height: 18px;margin-right: 8px;"/></a>
+                        <a href="javascript:;"><img src="../resourse/imgs/star1.png" style="width: 20px;height: 18px;margin-right: 8px;"/></a>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+            </div>
+            <div class="upwai">
+                     <input class="orderbtn" type="submit" value="提交"/> 
+            </div>	
+        </form>
+            
+</body>
+
+<script type="text/javascript">
+
+    $(function(){
+        var src_value1 = 0;
+
+        $("#stars a img").click(function () {
+            src_value1 = $(this).attr("src");
+            if(src_value1 == "../resourse/imgs/star1.png"){
+                $(this).attr("src","../resourse/imgs/star2.png");
+            }else{
+                $(this).attr("src","../resourse/imgs/star1.png");
+            }
+        })
+    })
+
+
+</script>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../resourse/css/style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="./jquery.min.js"></script>
+    <title>租房</title>
+    <script type="text/javascript" src="./ad.js"></script>
+    <script type="text/javascript" src="../resourse/js/jquery-1.5.2.js"></script>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+</head>
+<style type="text/css">
+    .navk{
+        position: relative;
+    }
+    .font-orange{
+        color: orange;
+    }
+    .border-orange{
+        color: orange;
+        border: 1px solid orange!important;
+    }
+    .borbottom-orange{
+        color: orange;
+        border-bottom: 1px solid orange;
+    }
+    .marginleft{
+        margin-left: 23%;
+    }
+    /*are-subway*/
+    .area-subway{
+        position: absolute;
+        display: none;
+        width: 100%;
+        background-color: #fff;
+    }
+    .area-subway div input{
+        float: left;
+        width: 50%;
+        border: 0;
+        padding: 10px 20px;
+        background-color: #fff;
+    }
+    .area-subway ul{
+        list-style-type: none;
+        float: left;
+    }
+    .area-subway ul li{
+        padding: 10px 10px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .area-subway ul li a{
+        border:0;
+        text-decoration:none;
+    }
+
+    /*rent*/
+    .rent{
+        position: absolute;
+        display: none;
+        width: 100%;
+        background-color: #fff;
+
+    }
+    .rent ul{
+        list-style-type: none;
+        text-align: center;
+
+    }
+    .rent ul li{
+        padding: 10px 0;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .rent ul li a{
+        /*font-size: 21px;*/
+        text-decoration: none;
+
+    }
+    /*type*/
+     .type{
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+    }
+    .type ul{
+        list-style-type: none;
+        text-align: center;
+
+    }
+    .type ul li{
+        padding: 10px 0;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .type ul li a{
+        /*font-size: 21px;*/
+        text-decoration: none;
+
+    }
+
+    /*type-select*/
+    .type-select{
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+    }
+    .type-select div input{
+        border: 0;
+        width: 30%;
+        padding: 10px 10px;
+    }
+    .type-select ul{
+        list-style-type: none;
+
+    }
+    .type-select ul li{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .three-li input{
+        margin-left: 10px;
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+        padding: 10px 20px ;
+        width: 28%;
+    }
+    .four-li input{
+        margin-left: 10px;
+        margin-right: -1px;
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+        padding: 10px 20px ;
+        width: 20%;
+    }
+    .type-select ul li p{
+        color: #dcdcdc;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+</style>
+<script type="text/javascript">
+    /*Four of button slideToggle*/
+    $(function(){
+        $("#area-click").click(function(){
+            $(this).addClass("font-orange").siblings().removeClass("font-orange");
+            $(this).children("li").children("img").attr("src","../resourse/imgs/arrow1.png");
+            $(this).siblings().children("li").children("div").children("img").attr("src","../resourse/imgs/arrow2.png");
+
+            $(".area-subway").slideToggle();
+            $(".type-select").hide();
+            $(".type").hide();
+            $(".rent").hide();
+        })
+
+        $("#rent-click").click(function(){
+            $(this).addClass("font-orange").siblings().removeClass("font-orange");
+            $(this).children("li").children("div").children("img").attr("src","../resourse/imgs/arrow1.png");
+            $("#area-click").children("li").children("img").attr("src","../resourse/imgs/arrow2.png");
+            $(this).siblings().children("li").children("div").children("img").attr("src","../resourse/imgs/arrow2.png");
+
+            $(".rent").slideToggle();
+            $(".type").hide();
+            $(".type-select").hide();
+            $(".area-subway").hide();
+        })
+
+        $("#type-click").click(function(){
+            $(this).addClass("font-orange").siblings().removeClass("font-orange");
+            $(this).children("li").children("div").children("img").attr("src","../resourse/imgs/arrow1.png");
+            $("#area-click").children("li").children("img").attr("src","../resourse/imgs/arrow2.png");
+
+            $(this).siblings().children("li").children("div").children("img").attr("src","../resourse/imgs/arrow2.png");
+
+                $(".type").slideToggle();
+                $(".rent").hide();
+                $(".type-select").hide();
+                $(".area-subway").hide();
+        })
+
+        $("#select-click").click(function(){
+            $(this).addClass("font-orange").siblings().removeClass("font-orange");
+            $(this).children("li").children("div").children("img").attr("src","../resourse/imgs/arrow1.png");
+            $("#area-click").children("li").children("img").attr("src","../resourse/imgs/arrow2.png");
+
+            $(this).siblings().children("li").children("div").children("img").attr("src","../resourse/imgs/arrow2.png");
+
+            $(".type-select").slideToggle();
+            $(".type").hide();
+            $(".rent").hide();
+            $(".area-subway").hide();
+        })
+
+    })
+
+    /*area-subway js*/
+    $(function(){
+        $("#left-area").click(function(){
+            $(this).addClass("borbottom-orange");
+            $("#right-subway").removeClass("borbottom-orange");
+            $("#city").show();
+            $("#area").show();
+            $("#subway-city").hide();
+            $("#subway-type").hide();
+        })
+        $("#right-subway").click(function(){
+            $(this).addClass("borbottom-orange");
+            $("#left-area").removeClass("borbottom-orange");
+            $("#subway-city").show();
+            $("#subway-type").show();
+            $("#city").hide();
+            $("#area").hide();
+        })
+
+
+        $("#city li a").click(function(){
+            $(this).addClass("font-orange").parents("li").siblings().children("a").removeClass("font-orange");
+            $("#area-click .tiaojian").html($(this).text());
+        })
+        $("#area li a").click(function(){
+            $(this).addClass("font-orange").parents("li").siblings().children("a").removeClass("font-orange");
+            $(".area-subway").slideToggle();
+        })
+        $("#subway-city li a").click(function(){
+            $(this).addClass("font-orange").parents("li").siblings().children("a").removeClass("font-orange");
+            $("#area-click .tiaojian").html($(this).text());
+        })
+        $("#subway-type li a").click(function(){
+            $(this).addClass("font-orange").parents("li").siblings().children("a").removeClass("font-orange");
+            $(".area-subway").slideToggle();
+
+        })
+
+    })
+
+    /*rent js*/
+    $(function(){
+        var rentnumber1=0;
+        var rentnumber2=0;
+        var temp=0;
+        $(".rent ul li a").click(function(){
+            $("#rent-click li div").removeClass("marginleft");
+            $(this).addClass("font-orange").parents("li").siblings().children("a").removeClass("font-orange");
+            $(".rent").slideToggle();
+            rentnumber1 = Number($(this).parents("li").index());
+
+            if(rentnumber1 != 0){
+                temp = rentnumber1;
+                rentnumber1 = rentnumber1 - 1;
+                rentnumber2 = temp;
+                $("#rent-click .tiaojian").html(rentnumber1 + "K~" + rentnumber2 + "K");
+            }else{
+                $("#rent-click li .lnav").addClass("marginleft");
+                $("#rent-click .tiaojian").html("租金");
+            }
+
+
+        })
+    })
+
+    /*type js*/
+    $(function(){
+        var typename="";
+        var rentnumber=0;
+        $(".type ul li a").click(function(){
+            $("#type-click li div").removeClass("marginleft");
+            $(this).addClass("font-orange").parents("li").siblings().children("a").removeClass("font-orange");
+            $(".type").slideToggle();
+            rentnumber = Number($(this).parents("li").index());
+            typename = $(this).text();
+            if(rentnumber!=0){
+                if(rentnumber == 5){
+                    $("#type-click li .lnav").removeClass("marginleft");
+                    $("#type-click .tiaojian").html(typename);
+                }else{
+                    $("#type-click li .lnav").addClass("marginleft");
+                    $("#type-click .tiaojian").html(typename);
+                }
+
+            }else{
+                $("#type-click li .lnav").addClass("marginleft");
+                $("#type-click .tiaojian").html("户型");
+            }
+
+
+        })
+    })
+
+    /*type-select js*/
+    $(function(){
+        var clicknum = 0;
+        $(".type-select ul li input").click(function(){
+            $("#select-click li div").removeClass("marginleft");
+            var bordercolor = $(this).attr("class").indexOf("border-orange");
+            if(bordercolor>=0){
+                clicknum--;
+                $(this).removeClass("border-orange");
+            }else{
+                $(this).addClass("border-orange");
+                clicknum++;
+            }
+        })
+        $("#confirm").click(function(){
+            $(".type-select").slideToggle();
+            if(clicknum == 0){
+                $("#select-click li .lnav").addClass("marginleft");
+                $("#select-click .tiaojian").html("更多");
+            }else{
+                $("#select-click li div").removeClass("marginleft");
+                $("#select-click .tiaojian").html("更多("+clicknum+")");
+            }
+
+        })
+        $("#delete").click(function(){
+            $(".type-select ul li").each(function(index){
+                $(this).children("input").removeClass("border-orange");
+                clicknum=0;
+            })
+        })
+        $("#cancel").click(function(){
+            $(".type-select").slideToggle();
+            $("#select-click li .lnav").addClass("marginleft");
+            $("#select-click .tiaojian").html("更多");
+        })
+
+    })
+</script>
+<body>
+
+<div class="main-top">
+  <a href="city.html">
+    <div class="location">
+        广州
+        <img style ="margin-left:1px;height:7px;"src="../resourse/imgs/sanjiao.png"/>
+    </div>
+    </a>
+    <div>
+        <form name="search"method="get" action="map.html">
+            <div class="inputall">
+                <img class="search-logo"src="../resourse/imgs/icom-search.png"/>
+                <input class="input" type="text"size="16"placeholder="输入所在地区查找房源"/>
+            </div>
+            <input name="submit" class="btn" type="image" value="按钮" src="../resourse/imgs/icom-map.png"/>
+            <div class="cl"></div>
+        </form>
+    </div>
+    <div class="cl"></div>
+</div>
+<div class="cl"></div>
+
+<div class="navk" >
+    <ul style="padding: 15px 0 15px 0;">
+        <a id="area-click" class="font-orange">
+            <li style="width:28%;padding-right:0px;"class="lr">
+                <div class="tiaojian">区域/地铁</div>
+                <img style="margin-left:5px;"src="../resourse/imgs/arrow1.png">
+            </li>
+        </a>
+        <div class="line">
+            <img src="../resourse/imgs/lineh.png">
+        </div>
+
+
+        <a id="rent-click">
+            <li class="lr"style="width:20%;">
+                <div class="lnav marginleft" >
+                    <div class="tiaojian">租金</div>
+                    <img src="../resourse/imgs/arrow2.png"style="margin-left:5px;">
+                    <div class="cl"></div>
+                </div>
+            </li>
+        </a>
+        <div class="line">
+            <img src="../resourse/imgs/lineh.png">
+        </div>
+
+        <a  id="type-click">
+            <li class="lr"style="width:25%;padding-right:0px;">
+                <div class="lnav marginleft" >
+                    <div class=" tiaojian">户型</div>
+                    <img src="../resourse/imgs/arrow2.png">
+                    <div class="cl"></div>
+                </div>
+            </li>
+
+        </a>
+        <div class="line">
+            <img src="../resourse/imgs/lineh.png">
+        </div>
+
+
+        <a id="select-click">
+            <li class="lr"style="width:26%;">
+                <div class="lnav marginleft">
+                    <div class=" tiaojian">更多</div>
+                    <img style="margin-left:2px;"src="../resourse/imgs/arrow2.png">
+                    <div class="cl"></div>
+                </div>
+            </li>
+        </a>
+
+        <div class="cl"></div>
+    </ul>
+</div>
+
+<div class="area-subway">
+    <div>
+        <input type="button" id="left-area" style="border-right: 1px solid #dcdcdc" value="区域"/>
+        <input type="button" id="right-subway" value="地铁"/>
+    </div>
+    <ul id="city" style="background-color: #fff;width:30%;text-align: center;">
+        <li><a>全部</a></li>
+        <li><a>天河区</a></li>
+        <li><a>海珠区</a></li>
+        <li><a>白云区</a></li>
+        <li><a>萝岗区</a></li>
+        <li><a>花都区</a></li>
+        <li><a>越秀区</a></li>
+    </ul>
+    <ul id="area" style="background-color: #dcdcdc;width:70%;text-align: left;">
+        <li><a>全部</a></li>
+        <li><a>天河体育中心</a></li>
+        <li><a>奥体</a></li>
+        <li><a>车陂</a></li>
+        <li><a>东圃</a></li>
+        <li><a>广园东</a></li>
+        <li><a></a></li>
+    </ul>
+    <ul id="subway-city" style="background-color: #fff;width:30%;text-align: center;display: none">
+        <li><a>全部</a></li>
+        <li><a>天河区</a></li>
+        <li><a>海珠区</a></li>
+        <li><a>白云区</a></li>
+        <li><a>萝岗区</a></li>
+        <li><a>花都区</a></li>
+        <li><a>越秀区</a></li>
+    </ul>
+    <ul id="subway-type" style="background-color: #dcdcdc;width:70%;text-align: left;display: none">
+        <li><a>全部</a></li>
+        <li><a>地铁4号线</a></li>
+        <li><a>地铁5号线</a></li>
+        <li><a>地铁6号线</a></li>
+        <li><a>地铁7号线</a></li>
+        <li><a>地铁8号线</a></li>
+        <li><a>地铁9号线</a></li>
+    </ul>
+</div>
+
+<div class="rent">
+    <ul>
+        <li><a>全部</a></li>
+        <li><a>1000以下</a></li>
+        <li><a>1000-2000</a></li>
+        <li><a>2000-3000</a></li>
+        <li><a>3000-4000</a></li>
+        <li><a>4000-5000</a></li>
+        <li><a>5000-6000</a></li>
+        <li><a>6000-7000</a></li>
+    </ul>
+</div>
+
+<div class="type">
+    <ul>
+        <li><a>全部</a></li>
+        <li><a>一室</a></li>
+        <li><a>二室</a></li>
+        <li><a>三室</a></li>
+        <li><a>四室</a></li>
+        <li><a>四室以上</a></li>
+    </ul>
+</div>
+
+<div class="type-select">
+    <div style="background-color: #dcdcdc;width:100%;height:38px;">
+        <div style="height: 30px;text-align: center">
+            <input type="button" id="delete" style="float: left;background-color: #dcdcdc;color:red;" value="清空"/>
+            <div style="width: 30%;float:left;padding-top: 10px;padding-left: 20px"><span>筛选条件</span></div>
+            <input type="button" id="cancel" style="float:right;background-color: #dcdcdc" value="取消"/>
+        </div>
+    </div>
+    <ul>
+        <li class="three-li">
+            <p>排序</p>
+            <input type="button" value="默认"/>
+            <input type="button" value="最新"/>
+            <input type="button" value="价格"/>
+        </li>
+        <li class="four-li">
+            <p>装修</p>
+            <input type="button" value="毛坯"/>
+            <input type="button" value="简装"/>
+            <input type="button" value="精装"/>
+            <input type="button" value="豪装"/>
+
+        </li>
+        <li class="four-li">
+            <p>房屋配置</p>
+            <input type="button" value="电视"/>
+            <input type="button" value="空调"/>
+            <input type="button" value="冰箱"/>
+            <input type="button" value="热水器"/>
+        </li>
+        <li class="three-li">
+            <input type="button" value="洗衣机"/>
+            <input type="button" value="网络"/>
+            <input type="button" value="家具"/>
+        </li>
+
+        <li>
+            <button id="confirm" style="width: 94%;border:0;margin-left: 2%;margin-right:2%;padding:10px;background-color: orange;color:#fff" >确认筛选</button>
+        </li>
+    </ul>
+</div>
+
+<div class="messageall">
+<a href="#">
+    <div class="message">
+        <img class="photo"src="../resourse/imgs/31.jpeg">
+        <div class="house-message">
+            <div  class="jianju" >
+                <div class="house-name">富力天朗明居</div>
+                <div class="money">￥3500元/月</div>
+                <div class="cl"></div>
+            </div>
+            <div class="race">
+                <div class="regional-width">2室1厅1卫</div>
+                <img class="line2" src="../resourse/imgs/lineh.png"/>
+                <div class="area">74m*m</div>
+                <div class="fiftment">精装修</div>
+                <div class="cl"></div>
+            </div>
+            <div class="jianju">
+                <div class="way-line">地铁4号线、5号线</div>
+                <div class="distance">1.2km</div>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+</a>
+
+
+
+
+<div class="message">
+    <img class="photo"src="../resourse/imgs/31.jpeg">
+    <div class="house-message">
+        <div  class="jianju" >
+            <div class="house-name">富力天朗明居</div>
+            <div class="money">￥3500元/月</div>
+            <div class="cl"></div>
+        </div>
+        <div class="race">
+            <div style="float:left;">2室1厅1卫</div>
+            <img class="line2" src="../resourse/imgs/lineh.png"/>
+            <div class="area">74m*m</div>
+            <div class="fiftment">简装</div>
+            <div class="cl"></div>
+        </div>
+        <div class="jianju">
+            <div class="way-line">地铁4号线、5号线</div>
+            <div class="distance">1.2km</div>
+            <div class="cl"></div>
+        </div>
+    </div>
+    <div class="cl"></div>
+</div>
+
+    <div class="message">
+        <img class="photo"src="../resourse/imgs/31.jpeg">
+        <div class="house-message">
+            <div  class="jianju" >
+                <div class="house-name">富力天朗明居</div>
+                <div class="money">￥3500元/月</div>
+                <div class="cl"></div>
+            </div>
+            <div class="race">
+                <div style="float:left;">2室1厅1卫</div>
+                <img class="line2" src="../resourse/imgs/lineh.png"/>
+                <div class="area">74m*m</div>
+                <div class="fiftment">简装</div>
+                <div class="cl"></div>
+            </div>
+            <div class="jianju">
+                <div class="way-line">地铁4号线、5号线</div>
+                <div class="distance">1.2km</div>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+
+    <div class="message">
+        <img class="photo"src="../resourse/imgs/31.jpeg">
+        <div class="house-message">
+            <div  class="jianju" >
+                <div class="house-name">富力天朗明居</div>
+                <div class="money">￥3500元/月</div>
+                <div class="cl"></div>
+            </div>
+            <div class="race">
+                <div style="float:left;">2室1厅1卫</div>
+                <img class="line2" src="../resourse/imgs/lineh.png"/>
+                <div class="area">74m*m</div>
+                <div class="fiftment">简装</div>
+                <div class="cl"></div>
+            </div>
+            <div class="jianju">
+                <div class="way-line">地铁4号线、5号线</div>
+                <div class="distance">1.2km</div>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <div class="message">
+        <img class="photo"src="../resourse/imgs/31.jpeg">
+        <div class="house-message">
+            <div  class="jianju" >
+                <div class="house-name">富力天朗明居</div>
+                <div class="money">￥3500元/月</div>
+                <div class="cl"></div>
+            </div>
+            <div class="race">
+                <div style="float:left;">2室1厅1卫</div>
+                <img class="line2" src="../resourse/imgs/lineh.png"/>
+                <div class="area">74m*m</div>
+                <div class="fiftment">简装</div>
+                <div class="cl"></div>
+            </div>
+            <div class="jianju">
+                <div class="way-line">地铁4号线、5号线</div>
+                <div class="distance">1.2km</div>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+<a href="#">
+    <div class="message">
+        <img class="photo"src="../resourse/imgs/31.jpeg">
+        <div class="house-message">
+            <div  class="jianju" >
+                <div class="house-name">富力天朗明居</div>
+                <div class="money">￥3500元/月</div>
+                <div class="cl"></div>
+            </div>
+            <div class="race">
+                <div class="regional-width">2室1厅1卫</div>
+                <img class="line2" src="../resourse/imgs/lineh.png"/>
+                <div class="area">74m*m</div>
+                <div class="fiftment">精装修</div>
+                <div class="cl"></div>
+            </div>
+            <div class="jianju">
+                <div class="way-line">地铁4号线、5号线</div>
+                <div class="distance">1.2km</div>
+                <div class="cl"></div>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+</a>
+
+
+
+
+
+
+
+
+
+
+<div class="cl"></div>
+</div>
+<div class="cl"></div>
+<div class="xiabianju"></div>
+
+
+</body>
+</html>

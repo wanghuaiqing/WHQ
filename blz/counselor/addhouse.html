@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="../resourse/css/style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加房源</title>
+<link rel="stylesheet" href="../resourse/css/weui.css"/>
+<link rel="stylesheet" href="../resourse/css/addhouse_duoxuan.css"/>
+<!-- <script src="../resourse/js/jquery-1.5.2.js"></script> -->
+<script src="../resourse/js/jquery.js"></script>
+<script src="../resourse/js/ui-choose.js"></script>
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<style>
+    a{text-decoration:none;}
+    .border-orange{
+        color: orange;
+        border: 1px solid orange!important;
+    }
+    .TF-button ul{
+        list-style-type: none;
+        float:left;
+
+    }
+    .TF-button ul li{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .three-li input{
+        margin-left: 10px;
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+        padding: 10px 20px ;
+        width: 28%;
+    }
+    .four-li input{
+        margin-left: 10px;
+        margin-right: -1px;
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+        padding: 10px 20px ;
+        width: 20%;
+    }
+    .ui-choose li{
+        list-style-type: none;
+        margin-left: 10px;
+        margin-right: -1px;
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+        padding: 10px 20px ;
+        /*width: 20%;*/
+        list-style-type: none;
+        float:left;
+    }
+</style>
+<script type="text/javascript">
+$('.ui-choose').ui_choose();
+ // uc_03 ul 多选
+var uc_03 = $('#uc_03').data('ui-choose');
+uc_03.click = function(index, item) {
+    console.log('click', index);
+};
+uc_03.change = function(index, item) {
+    console.log('change', index);
+};
+
+
+
+
+    $(function(){
+        $("#statement li input").click(function(){
+            var bordercolor = $(this).attr("class").indexOf("border-orange");
+            if(bordercolor>=0){
+                $(this).removeClass("border-orange");
+            }else{
+                $(this).addClass("border-orange");
+            }
+        })
+        $("#fix-status li input").each(function(){
+            $(this).click(function(){
+                $(this).addClass("border-orange").siblings().removeClass("border-orange");
+            })
+        })
+    })
+</script>
+</head>
+<body>
+       
+        <form name="uporder" method="post" action="#">
+
+            <div class="counselor-day-upload">
+                
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                 	<div class="schedule-head-upload">
+                 		<div class="schedule-name-upload">业主</div>
+                 		<input class="schedule-time-upload" placeholder="请输入业主"type="text"/>
+                 		<div class="cl"></div>
+                 	</div>
+                </div>
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">手机号</div>
+                        <input class="schedule-time-upload" placeholder="请输入手机号"type="text"/>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+                <a href="housebelong.html?dizhi=dizhizhi"><!-- 从所链接的页面get到地址值 -->
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">所在城市</div>
+                        <div class="schedule-time-upload" >广州市 广州天河区&nbsp;&nbsp;〉</div>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+                </a>
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">详细地址</div>
+                         <input class="schedule-time-upload" placeholder="请输入详细地址"type="text"/> 
+                        <div class="cl"></div>
+                    </div>
+                    <a href="housebelong.html?dizhi=dizhizhi"><!-- 从所链接的页面get到地址值 -->
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">小区名称</div>
+                        <div class="schedule-time-upload" >骏景花园&nbsp;&nbsp;〉</div>
+                        <div class="cl"></div>
+                    </div> 
+                    </a>
+                </div>
+
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                <a href="housebelong.html">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">商圈</div>
+                        <div class="schedule-time-upload" >〉</div>
+                        <div class="cl"></div>
+                    </div>
+                </a>   
+                </div>
+
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                <a href="housebelong.html">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">地铁线</div>
+                        <div class="schedule-time-upload" >〉</div>
+                        <div class="cl"></div>
+                    </div>
+                </a>   
+                </div>
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">房源名称</div> 
+                         <input class="schedule-time-upload" placeholder="请输入房源名称"type="text"/>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">楼号</div>
+                        <input class="schedule-time-upload" placeholder="请输入楼号"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+                <div style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">单元号</div>
+                        <input class="schedule-time-upload" placeholder="请输入单元号"type="text"/>
+                        <div class="cl"></div>
+                    </div>   
+                </div>
+
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">室号</div>
+                        <input class="schedule-time-upload" placeholder="请输入室号"type="text"/>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">户型</div>
+                        <input class="schedule-time-upload" placeholder="请输入户型"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">面积</div>
+                        <input class="schedule-time-upload" placeholder="请输入面积"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">期望租金</div>
+                        <input class="schedule-time-upload" placeholder="请输入期望租金"type="text"/>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">年代</div>
+                        <input class="schedule-time-upload" placeholder="请输入年代"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+
+                 <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">南北通风</div>
+                        <input class="schedule-time-upload" placeholder="请输入通风状况"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+                 <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">朝向</div>
+                        <input class="schedule-time-upload" placeholder="请输入房子朝向"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload TF-button">
+                        <div class="schedule-name-upload">装修状态</div>
+
+                        <ul id="fix-status">
+
+                            <li  class="four-li">
+                                <input type="button" value="毛坯"/>
+                                <input type="button" value="简装"/>
+                                <input type="button" value="精装"/>
+                                <input type="button" value="豪装"/>
+
+                            </li>
+                        </ul>
+
+                        <div class="cl"></div>
+                    </div> 
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">精简</div>      
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">发布时间</div>
+                        <input class="schedule-time-upload" placeholder="请输入发布时间"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+                <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">电梯数</div>
+                        <input class="schedule-time-upload" placeholder="请输入电梯数量"type="text"/>
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+
+
+                 <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload ">
+                        <div class="schedule-name-upload">设施</div>
+                        <div class="schedule-name-upload">
+                        <ul  class="ui-choose" id="uc_03">
+                           
+                                <li>空调</li>
+                                <li>电视</li>
+                                <li>冰箱</li>
+                                <li>家具</li>
+                                <!-- <li type="button" value="电视"/>
+                                <li type="button" value="冰箱"/>
+                                <li type="button" value="家具"/> -->
+                            
+                                 <li>洗衣机</li>
+                                <li>网络</li>
+                                <li>洗衣机</li>
+                                <!-- <input type="button" value="洗衣机"/>
+                                <input type="button" value="网络"/>
+                                <input type="button" value="家具"/> -->
+                            
+                        </ul>
+
+                        <div class="cl"></div>
+                        </div>
+                    </div> 
+
+                </div>
+
+
+<script>   //删除照片 未完成
+$(function(){
+    var clicknum = 0;
+    $(".weui_uploader_files li").click(function(){
+        var div1 = $("<div class='weui_uploader_status_content'><i class='weui_icon_warn'></i></div>");
+        var li1 = $("<li class='weui_uploader_file' style='display: none'></li>");
+        $(this).addClass("weui_uploader_status");
+        $(this).append(div1);
+        $(this).click(function(){
+            $(this).removeClass("weui_uploader_status");
+            $(this).removeAttr("style");
+            $(this).css("display","none");
+            $(this).children().remove();
+            $(".preview").after($(this));
+            if(clicknum == 8){
+                $(this).parents("ul").children("li:last-child").after($(this));
+                $(this).addClass("preview");
+                clicknum--;
+            }else{
+                clicknum--;
+            }
+        })
+
+    })
+    $(function() {
+        $(".weui_uploader_input").change(function() {
+            var $file = $(this);
+            var fileObj = $file[0];
+            var windowURL = window.URL || window.webkitURL;
+            var dataURL;
+            var $img = $(".preview");
+
+            if(fileObj && fileObj.files && fileObj.files[0]){
+                dataURL = windowURL.createObjectURL(fileObj.files[0]);
+                $img.css('background-image',"url("+dataURL+")");
+                $img.show();
+                $img.removeClass("preview");
+                $img.next("li").addClass("preview");
+                clicknum++;
+            }else{
+                dataURL = $file.val();
+                var imgObj = document.getElementById("preview");
+                imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
+            }
+        });
+    });
+});
+</script>
+
+
+               <div  style="margin-top:0;"class="schedule-message-upload">
+                    <div class="schedule-head-upload">
+                        <div class="schedule-name-upload">房源图片</div>      
+                        <div class="cl"></div>
+                    </div> 
+                    <div class="schedule-head-upload">
+                  
+                         <div class="weui_uploader_bd">
+                            <ul class="weui_uploader_files" >
+                                <li class="weui_uploader_file preview" style="display: none"></li>
+                                <li class="weui_uploader_file" style="display: none"></li>
+                                <li class="weui_uploader_file" style="display: none"></li>
+                                <li class="weui_uploader_file" style="display: none"></li>
+                                <li class="weui_uploader_file" style="display: none"></li>
+                                <li class="weui_uploader_file" style="display: none"></li>
+                                <li class="weui_uploader_file" style="display: none"></li>
+                                <li class="weui_uploader_file" style="display: none"></li>
+                                <!--<li class="weui_uploader_file weui_uploader_status" style="background-image:url(../imgs/31.jpeg) ;">
+                                    <div class="weui_uploader_status_content">
+                                        <i class="weui_icon_warn"></i>&lt;!&ndash; 上面红色！号 &ndash;&gt;
+                                    </div>
+                                </li>-->
+                                <!--<li class="weui_uploader_file weui_uploader_status" style="background-image:url(../imgs/31.jpeg)">
+                                    &lt;!&ndash; <div class="weui_uploader_status_content"></div> &ndash;&gt;
+                                    <div class="weui_uploader_status_content"><img class="my-house-logo"src="../imgs/31.jpeg"/></div>&lt;!&ndash; 上面图片 &ndash;&gt;
+                                </li>-->
+                            </ul>
+                            <div class="weui_uploader_input_wrp">
+                                <input class="weui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" multiple />
+                            </div>
+                        </div>
+                        
+                        <div class="cl"></div>
+                    </div> 
+                </div>
+
+               
+
+
+            </div>
+            <div  style="height:80px;"class="xiabianju"></div>
+            
+            <div class="upwai">
+                 <a href="#">
+                     <input class="orderbtn" type="submit" value="确认上传"/>
+                    
+                 </a>  
+            </div>	
+        </form>
+            
+</body>
+</html>

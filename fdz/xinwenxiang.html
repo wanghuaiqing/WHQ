@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<script src="./jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/swipe2.js"></script>
+<script type="text/javascript" src="./ad.js"></script> 
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+</head>
+<style>
+	.cont { word-wrap:break-word;width:100%; border-bottom:solid 2px #dcdcdc; padding-bottom:10px; margin-bottom:10px; margin-bottom:10px; }
+	.stime { color:#666; float:right;padding-left:20px;}
+	/*.header { border:solid #e8e8e8 2px; margin-right:10px; float:left ;background-color:yellow;}*/
+    .pop_message {
+    min-width: 160px;
+    min-height: 60px;
+    max-width: 80%;
+    margin: -50px 0 0 -80px;
+    position:fixed;
+    top:40%;
+    left:50%;
+    z-index:990;
+    display:none;
+    border:1px solid #fff5c8;
+    border-radius:6px;
+    background-color:rgba(0,0,0,0.8);
+    text-align:center;
+    line-height:60px;
+    color:#ffffff;
+    }
+    .totop{
+        position:fixed;
+        right:-3px;
+        bottom:35px;
+        z-index: 2999999;
+    }
+	.clear { clear:both ;}
+</style>
+<body style="padding:0px;"class="bg">
+	
+		 <div class="main_top">
+		 	  <div class="Tleft"><a href="index.html"><img src="imgs/home.png" ></a></div>
+	        新闻详情
+	      <div class="Tright"><img src="imgs/menu.png"></div>
+	      <!--<div class="Tright"><a href="wodefenlan.html"><img src="imgs/menu.png"></a></div>-->
+	      <div class="Tright"><a href="search.html"><img src="imgs/sousuo.png"></a></div>
+		 </div>
+         <!-- 右侧边栏 -->
+		<div  class="main_right" >
+		  <div class="main_right_menu">
+				
+				
+				<a href="gerenzhongxin.html"><div class="touxiang10"><img class="tupian10" src="imgs/31.jpeg"></div></a>
+		 	  <div class="kuang">
+		 	  	 	  <ul  >
+		 	  	 	  	<a href="xiehuijieshao.html">
+		 	  	 	  	<li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuijieshao2.png">
+		 	  	        <div>协会介绍</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/ruhuiqiye2.png">
+		 	  	        <div>入会企业</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuizhangcheng.png">
+		 	  	        <div>协会章程</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="xiehuijieshao.html">
+		 	  	 	  	<li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuijieshao2.png">
+		 	  	        <div>协会介绍</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/ruhuiqiye2.png">
+		 	  	        <div>入会企业</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuizhangcheng.png">
+		 	  	        <div>协会章程</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      
+		 	  	     
+		 	  	      
+		 	  	 	  </ul>
+		 	  	
+		 	  	 <div style="clear:both"></div>
+		 	  </div>	
+				
+				
+		  </div>
+		  <div class="main_right_bg"></div>
+		</div> 
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		
+		$(".main_right_bg").click(function(){
+					$(".main_right").hide(200);
+				});
+		$(".Tright").click(function(){
+					$(".main_right").show(200);
+				});
+		$(function () {
+					$(window).scroll(function(){
+						if ($(window).scrollTop()>60){
+							$(".main_top").fadeOut(200);
+						}
+						else
+						{
+							$(".main_top").fadeIn(200);
+						}
+				});
+		});
+	}); 
+ </script>  
+     			  
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <div class="totop"><img id="gototop" src="imgs/gototop.png" ></div>
+		 
+		 <div class="mohuceng" style="text-align: left;">
+		 	  <h3 style="text-align:left;padding:20px 0 5px 15px;">复旦大学校友联合会</h3>
+		 	  <div style="float:left;padding:5px 0 2px 15px;color:#cfcfcf;">成立时间：2016.03.20 </div>
+		 	  <div class="cl"></div>
+		 	  <div class="xiangkuang"><img width=200px; style="border-radius:3px;"src="imgs/xuexiaologo.jpg" ></div>
+		 	  <div class="zhong11">
+
+		 	  	<div class="xiazi1" >
+		 	  		
+		 	  		<hr style=" width:90%;height:1px;border:none;border-top:4px solid #f4f4f4;" />
+		 	  		eywtgshbsdhfjytdjiutdjshghdgfhdfjnreywtggfghgfatdjiutdjshghdgfhdfjn
+		 	  		eywtgshbsdhfjytdjiutdjshghdgfhdfjnreywtggfghgfatdjiutdjshghdgfhdfjn
+		 	  		eywtgshbsdhfjytdjiutdjshghdgfhdfjnreywtggfghgfatdjiutdjshghdgfhdfjn
+		 	  		eywtgshbsdhfjytdjiutdjshghdgfhdfjnreywtggfghgfatdjiutdjshghdgfhdfjn
+		 	  		eywtgshbsdhfjytdjiutdjshghdgfhdfjnreywtggfghgfatdjiutdjshghdgfhdfjn
+		 	  		eywtgshbsdhfjytdjiutdjshghdgfhdfjnreywtggfghgfatdjiutdjshghdgfhdfjn
+		 	  		fgdshdsjgfeywtgshbsdhrwetfgdshdsjgfeywtgshbsdhrwetfgdshdsjgfeywtgshbsdhrwe
+
+		 	  </div>
+		 	  <div style="color:#ed7d04;padding:5px 20px;padding-top:0px;text-align:right;">
+                     <a href=""><img style="width:25px;" src="imgs/shang2.png"></a>
+                     <a href=""><img style="width:25px;" src="imgs/xia2.png"></a>
+                     <div class="cl"></div>
+                 <div class="cl"></div>
+              </div>
+		 	<div style="padding:10px 15px 2px 15px;color:#b5b5b5;background-color:#f4f4f4;border-top:1px solid #e1e1e1;">
+            
+            
+              <div   class="infoact">
+                <div style="float:left;line-height:28px;margin:0 10px 0 0 ;">阅读 542 </div>
+
+                
+                <span id="likelogo"><a href="javascript:;"><img id="add_join" src="imgs/like3.png" ></a></span>
+
+                <span id="favorlogo"><a href="javascript:;"><img id="add_favor" src="imgs/favor3.png" /></a></span>
+
+                <!-- <img id="gototop" src="imgs/gototop.png" > -->
+               <!--  <img id="add_discuss" src="imgs/discuss.png" > -->
+                <span id="focuslogo"><a href="javascript:;"><img id="add_focus" src="imgs/focus.png" ></a></span>
+                
+                <a href="#cont"><img id="add_discuss" src="imgs/discuss.png" ></a>
+                <img id="add_share" src="imgs/share.png" >
+     
+             </div>
+ 
+  <div class="pop_message">text</div>
+  <!-- 点赞功能 -->
+   <script type="text/javascript"> 
+
+    $(function(){
+        var src_value1 = 0;
+
+        $("#likelogo a img ").click(function () {
+            src_value1 = $(this).attr("src");
+            if(src_value1 == "imgs/like3.png"){
+                $(this).attr("src","imgs/like4.png");
+            }else{
+                $(this).attr("src","imgs/like3.png");
+            }
+        })
+        $("#favorlogo a img ").click(function () {
+            src_value1 = $(this).attr("src");
+            if(src_value1 == "imgs/favor3.png"){
+                $(this).attr("src","imgs/favor2.png");
+            }else{
+                $(this).attr("src","imgs/favor3.png");
+            }
+        })
+        $("#focuslogo a img ").click(function () {
+            src_value1 = $(this).attr("src");
+            if(src_value1 == "imgs/focus.png"){
+                $(this).attr("src","imgs/focus3.png");
+            }else{
+                $(this).attr("src","imgs/focus.png");
+
+            }
+        })
+    })
+    
+
+
+</script>
+ <script type="text/javascript">
+    $(document).ready(function(){
+        
+        // $("#add_favor").click(function(){
+        //             $(".pop_message").text("本文已收藏!");
+        //             $(".pop_message").show(250);
+        //             $(".pop_message").delay(1000).hide(100);
+        //         });     
+        // $("#add_focus").click(function(){
+        //             $(".pop_message").text("本文已关注!");
+        //             $(".pop_message").show(250);
+        //             $(".pop_message").delay(1000).hide(100);
+        //         }); 
+        $("#add_share").click(function(){
+                    $(".pop_message").text("本文已分享!");
+                    $(".pop_message").show(250);
+                    $(".pop_message").delay(1000).hide(100);
+                }); 
+        // $("#add_join").click(function(){
+        //             $(".pop_message").text("已经点赞!");
+        //             $(".pop_message").show(250);
+        //             $(".pop_message").delay(1000).hide(100);
+        //         }); 
+       $("#gototop").click(function(){
+                    $('body,html').animate({scrollTop:0},1000);
+                });
+        // $("#add_discuss").click(function(){
+        //             $('body,html').animate({scrollTop:100%},1000);
+        //         });
+        
+        // $(function () {
+        //             $(window).scroll(function(){
+        //                 if ($(window).scrollTop()>60){
+        //                     $(".main_top").fadeOut(300);
+        //                 }
+        //                 else
+        //                 {
+        //                     $(".main_top").fadeIn(300);
+        //                 }
+        //         });
+        // });
+
+    }); 
+ </script> 
+			 	  	<!-- <div style="float:left;margin:0 10px 0 0 ;">阅读 542 </div>
+			 	  	<div style="float:left;padding:2px 0 0 0;"> <img  style="width:18px;height:16px;float:left;"src="imgs/like.png"/></div>
+			 	  	<div style="float:left;margin:0 0 0 5px;"> 765</div>
+			 	  	<div style="float:left;padding:2px 0 0 20px;"> <img  style="width:18px;height:16px;float:left;"src="imgs/favor1.png"/></div>
+			 	  	<div style="float:left;padding:2px 0 0 20px;"> <img  style="vertical-align:middle; width:23px;height:23px;float:left;"src="imgs/focus2.png"/></div>
+			 	  	<div style="float:left;padding:2px 0 0 20px;"> <img  style="width:25px;float:left;"src="imgs/share.png"/></div>
+			 	  	<div class="cl"></div> -->
+		 	  </div>
+		 	  <div style="margin-top:0px;border-top:1px solid #cdcccc;border-bottom:1px solid #cdcccc;height:30px;background-color:#dcdcdc;"></div>
+		 	  <div class="cl"></div>
+		 	  <div style="border-bottom:2px solid #e1e1e1;margin:8px 0 0 0;text-align:center;padding:0 0 3px 0" >
+		 	     <div style="padding:5px;color:#6d6d6d;">精彩评论</div> 
+		 	     <!-- <a href="#"><div style="float:right;padding:0 0 2px 0;color:green;margin:0 15px 0 0;">评论</div></a> --> <!-- 评论字体 -->
+		 	     <div class="cl"></div>
+		 	  </div>
+		 	  <div style="padding:0 15px 0 15px;">
+		 	  	
+		 	  	
+		 	  	
+		 	  	<div class="pingjiaqu">
+		 	  		<div style="float:left;">
+		 	  			<img  class="xiaotouxiang"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="neirong">
+		 	  			<div>
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  				
+		 	  			</div>
+		 	  			<div class="cl"></div>
+		 	  			<div class="pingyu">好的！</div>
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="pingjiaqu">
+		 	  		<div style="float:left;">
+		 	  			<img  class="xiaotouxiang"src="imgs/31.jpeg">
+		 	  		</div>
+		 	  		<div class="neirong">
+		 	  			<div>
+		 	  				<div style="float:left;">李白</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  				
+		 	  			</div>
+		 	  			<div class="cl"></div>
+		 	  			<div class="pingyu">没问题！</div>
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="pingjiaqu">
+		 	  		<div style="float:left;">
+		 	  			<img  class="xiaotouxiang"src="imgs/34.jpeg">
+		 	  		</div>
+		 	  		<div class="neirong">
+		 	  			<div>
+		 	  				<div style="float:left;">张三</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  				
+		 	  			</div>
+		 	  			<div class="cl"></div>
+		 	  			<div class="pingyu">会参加的！</div>
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="pingjiaqu">
+		 	  		<div style="float:left;">
+		 	  			<img  class="xiaotouxiang"src="imgs/36.jpeg">
+		 	  		</div>
+		 	  		<div class="neirong">
+		 	  			<div>
+		 	  				<div style="float:left;">杜甫</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  				
+		 	  			</div>
+		 	  			<div class="cl"></div>
+		 	  			<div class="pingyu">加油！</div>
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	<div class="pingjiaqu">
+		 	  		<div style="float:left;">
+		 	  			<img  class="xiaotouxiang"src="imgs/35.jpeg">
+		 	  		</div>
+		 	  		<div class="neirong">
+		 	  			<div>
+		 	  				<div style="float:left;">秦观</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>
+		 	  			<div class="pingyu">加油！</div>
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+                <div class="pingjiaqu">
+                    <div style="float:left;">
+                        <img  class="xiaotouxiang"src="imgs/35.jpeg">
+                    </div>
+                    <div class="neirong">
+                        <div>
+                            <div style="float:left;">秦观</div>
+                            <div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+                        </div>
+                        <div class="cl"></div>
+                        <div class="pingyu">加油！</div>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                
+               
+
+
+
+
+
+
+
+
+        <div class="pingjiaqu" style="border-bottom:0px;">
+
+
+	        <script type="text/javascript">
+				function addContent()
+				{
+					var now = new Date();
+					var layer = document.getElementById("layer");
+					var divlayer = document.createElement("div");
+					var con = document.getElementById("cont").value;
+					con = con.replace(/\n/g,"<br />");
+	 
+					divlayer.innerHTML = "<div style='float:left;width:60px;'><img class='xiaotouxiang'src='imgs/35.jpeg' /></div>" +"<div class='neirong'><div><div style='float:left;'>杜甫</div>"+"<div class='stime'>" + now.toLocaleString() + "</div>"+"</div><div class='cl'></div><div class='pingyu'>" +con +"</div>"+ "</div><div class='clear'></div>";
+					divlayer.className = "cont";
+					
+					layer.appendChild(divlayer);
+
+					document.getElementById("cont").value = "";
+				}
+			</script>
+
+
+			<div id="layer"></div>
+			<textarea id="cont"style="width:100%;background-color:#dcdcdc;padding:10px;box-sizing: border-box;"></textarea>
+			<input type="button" style="color:#ffffff;margin-top:10px;width:100%;padding:13px;background-color:#ed7d04;border:0px;border-radius:5px;"value="评价" onclick="addContent();" />
+			
+        </div>
+	  	
+		<div class="cl"></div>
+		 </div>	 
+		 
+		
+		 
+		 
+		 
+		 
+		 
+		 
+		 <div style="margin-top:50px;"></div>
+		 <div class="mohuceng4">
+		 	 <div style="float:left;width:100px;position:fixed;"><img src="imgs/yun1.png"style="vertical-align:middle;">&nbsp;云动态:</div>
+              <marquee style="padding-bottom:0px;margin-left:100px;" behavior="scroll" scrollamount="3"  loop="-1"  > 云动态云动态云动态</marquee>
+		 </div>
+		 </div>
+	</div>
+</body>
+</html>

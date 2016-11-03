@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<script src="./jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./ad.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/swipe2.js"></script>  
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+</head>
+<style type="text/css">
+	.totop{
+        position:fixed;
+        right:-3px;
+        bottom:30px;
+        z-index: 2999999;
+    }
+    .dian{
+        width:5px;
+        height:5px;
+        border-radius:50%;
+        background-color:#ed7d04;
+        float:left;
+        margin-right:5px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+ 
+       
+       $("#gototop").click(function(){
+                    $('body,html').animate({scrollTop:0},1000);
+                });
+
+
+    }); 
+ </script> 
+			 	  	
+<body style="padding:0px;"class="bg">
+
+     <div class="totop"><img id="gototop" src="imgs/gototop.png" ></div>
+	<div >
+		 <div class="main_top">
+		 	  <div class="Tleft"><a href="index.html"><img src="imgs/home.png" ></a></div>
+	        消息
+	      <div class="Tright"><img src="imgs/menu.png"></div>
+	      <div class="Tright2"><a href="search.html"><img src="imgs/sousuo.png"></a></div>
+		 </div>
+		 
+		 
+	 <div  class="main_right" >
+		  <div class="main_right_menu">
+				
+				
+				<a href="gerenzhongxin.html"><div class="touxiang10"><img class="tupian10" src="imgs/31.jpeg"></div></a>
+		 	  <div class="kuang">
+		 	  	 	  <ul  >
+		 	  	 	  	<a href="xiehuijieshao.html">
+		 	  	 	  	<li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuijieshao2.png">
+		 	  	        <div>协会介绍</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/ruhuiqiye2.png">
+		 	  	        <div>入会企业</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuizhangcheng.png">
+		 	  	        <div>协会章程</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="xiehuijieshao.html">
+		 	  	 	  	<li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuijieshao2.png">
+		 	  	        <div>协会介绍</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/ruhuiqiye2.png">
+		 	  	        <div>入会企业</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/xiehuizhangcheng.png">
+		 	  	        <div>协会章程</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      <a href="huodongzhaomu.html">
+		 	  	      <li class="xiaokuai">
+		 	  	 	  		<img class="huodong" src="imgs/lianxiwomen3.png">
+		 	  	        <div>联系我们</div>
+		 	  	      </li>
+		 	  	      </a>
+		 	  	      
+		 	  	      
+		 	  	      
+		 	  	     
+		 	  	      
+		 	  	 	  </ul>
+		 	  	
+		 	  	 <div style="clear:both"></div>
+		 	  </div>	
+				
+				
+		  </div>
+		  <div class="main_right_bg"></div>
+		</div> 
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		
+		$(".main_right_bg").click(function(){
+					$(".main_right").hide(200);
+				});
+		$(".Tright").click(function(){
+					$(".main_right").show(200);
+				});
+		$(function () {
+					$(window).scroll(function(){
+						if ($(window).scrollTop()>60){
+							$(".main_top").fadeOut(200);
+						}
+						else
+						{
+							$(".main_top").fadeIn(200);
+						}
+				});
+		});
+	}); 
+ </script>  	 
+		 
+		 
+		 
+		 
+		 
+		 <div class="Nmohuceng">
+		 	 
+		 	  <div style="padding:0 10px 0 10px;">
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np"><div class="dian"></div>通知消息</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np">个人消息</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np"><div class="dian"></div>通知信息：</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np"><div class="dian"></div>通知信息：</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np">通知信息：</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np"><div class="dian"></div>通知信息：</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np">通知信息：</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np">通知信息：</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	<div class="Nw">
+		 	  		<div style="float:left;">
+		 	  			<img  class="Nt"src="imgs/32.jpg">
+		 	  		</div>
+		 	  		<div class="Nn">
+		 	  			<div class="Np">通知信息：</div>
+		 	  			<div class="Np">2016年2月22日将举办活动！</div>
+		 	  			<div class="Nriqi">
+		 	  				<div style="float:left;">李某某</div>
+		 	  				<div style="float:left;margin:0 40px 0 50px;">2月8日</div>
+		 	  			</div>
+		 	  			<div class="cl"></div>	
+		 	  		</div>
+		 	  		<div class="cl"></div>
+		 	  	</div>
+		 	  	
+		 	  	
+		 	  	
+		 	  	
+		 	  	
+		 	  	<div class="cl"></div>
+                
+		 	  </div>
+		 	  <div style="color:#ed7d04;padding:0px 30px 0px 15px;text-align:right;">       
+                     <a href=""><img style="width:25px;" src="imgs/shang2.png"></a>
+                     <a href=""><img style="width:25px;" src="imgs/xia2.png"></a>
+                     <div class="cl"></div>
+              </div>
+		 </div>
+		 
+		 <div style="margin-top:30px;"></div>
+		 <div class="mohuceng4">
+		 	  <div style="float:left;width:100px;position:fixed;"><img src="imgs/yun1.png"style="vertical-align:middle;">&nbsp;云动态:</div>
+              <marquee style="padding-bottom:0px;margin-left:100px;" behavior="scroll" scrollamount="3"  loop="-1"  > 云动态云动态云动态</marquee>
+		 </div>
+	</div>
+</body>
+</html>

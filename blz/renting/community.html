@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../resourse/css/style.css" rel="stylesheet" type="text/css" />
+<title>小区详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="../resourse/js/jquery-1.7.1.min.js"></script>  <!--  轮播图Js -->
+<script type="text/javascript" src="../resourse/js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="../resourse/js/jquery.touchSlider.js"></script>
+
+<script src="./jquery.min.js"></script>
+<script type="text/javascript" src="./ad.js"></script> 
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<style>a{text-decoration:none;}</style>
+
+
+<script type="text/javascript">   //轮播图
+$(document).ready(function(){
+
+    $(".main_visual").hover(function(){
+        $("#btn_prev,#btn_next").fadeIn()
+    },function(){
+        $("#btn_prev,#btn_next").fadeOut()
+    });
+    
+    $dragBln = false;
+    
+    $(".main_image").touchSlider({
+        flexible : true,
+        speed : 200,
+        btn_prev : $("#btn_prev"),
+        btn_next : $("#btn_next"),
+        paging : $(".flicking_con a"),
+        counter : function (e){
+            $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+        }
+    });
+    
+    $(".main_image").bind("mousedown", function() {
+        $dragBln = false;
+    });
+    
+    $(".main_image").bind("dragstart", function() {
+        $dragBln = true;
+    });
+    
+    $(".main_image a").click(function(){
+        if($dragBln) {
+            return false;
+        }
+    });
+    
+    timer = setInterval(function(){
+        $("#btn_next").click();
+    }, 2000);
+    
+    $(".main_visual").hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        },2000);
+    });
+    
+    $(".main_image").bind("touchstart",function(){
+        clearInterval(timer);
+    }).bind("touchend", function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        }, 2000);
+    });
+    
+});
+   
+</script>
+<style type="text/css">  
+  .otherright{
+    width:53%;
+
+
+  }
+  .otherleft{
+    width:47%;
+}
+</style>
+</head>
+<body>
+
+    
+
+
+    <div class="main_visual">   <!-- 小圆点 -->
+        <div class="flicking_con">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+        </div>
+        <div class="main_image"> <!-- 图片 -->
+            <ul>
+                <li><span class="img_3"></span></li>
+                <li><span class="img_4"></span></li>
+                <li><span class="img_1"></span></li>
+                <li><span class="img_2"></span></li>
+                <li><span class="img_5"></span></li>
+                <li><span class="img_6"></span></li>
+                <li><span class="img_7"></span></li>
+                <li><span class="img_8"></span></li>
+                <li><span class="img_9"></span></li>
+            </ul>
+            <!-- 左右按钮 -->
+            <a href="javascript:;" id="btn_prev"></a>
+            <a href="javascript:;" id="btn_next"></a>
+        </div>
+    </div>
+<div  class="all">   <!--外面总内容-->
+    <div style="margin:0 13px 0px 13px;">
+        <div class="foc">  <!-- 通过自身来调间距 -->
+        关注小区
+        </div>
+
+        <div class="whit"> <!-- 大白色背景方块 -->
+            <div class="housename"style="border-bottom:0;">
+                <div style="color:#010101;font-size:18px;">骏景花园</div>
+                <div style="margin-top:8px;">
+                    <div style="float:left;" >天河区 棠东</div>
+                    <div style="float:right;"> 成交记录： 8336</div>
+                    <div class="cl"></div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="whit"> <!-- 大白色背景方块 -->
+            <div class="other">
+                <div class="otherleft" style="width:100%;">房屋类型：<span class="spa">普通住宅，高层洋房</span></div>
+                 <div class="cl"></div>
+            </div>
+            <div class="other">
+                <div class="otherleft">房屋总数：<span class="spa">3128户</span></div>
+                 <div class="otherright">建造年代：<span class="spa">2001年</span></div>
+                 <div class="cl"></div>
+            </div>
+            <div class="other">
+                <div class="otherleft">容积率：<span class="spa">3.5</span></div>
+                 <div class="otherright">占地面积：<span class="spa">6.66万m²</span></div>
+                 <div class="cl"></div>
+            </div>
+            <div class="other">
+                <div class="otherleft">绿护率：<span class="spa">31.70%</span></div>
+                 <div class="otherright">建造面积：<span class="spa">22.00万m²</span></div>
+                 <div class="cl"></div>
+            </div>
+            <div class="other">
+                <div class="otherleft">停车位：<span class="spa">1000</span></div>
+                 <div class="otherright">物业费：<span class="spa">0.22</span></div>
+                 <div class="cl"></div>
+            </div>
+            <div class="other"style="border-bottom:0;">
+                <div class="otherleft" style="width:100%;">物业公司：<span class="spa">广州启汇物业有限公司</span></div>
+                 <div class="cl"></div>
+            </div>  
+        </div>
+
+
+
+        <div class="whit"> <!-- 大白色背景方块 -->
+            <div class="other">
+                <div class="otherleft" style="width:100%;">开发商：<span class="spa">广州富力地产股份有限公司</span></div>
+                 <div class="cl"></div>
+            </div>
+            <div class="other"style="border-bottom:0;text-align:left;">
+            <div class="otherleft" style="width:100%;">天朗明居毗邻九运会主体育馆、天河公园、航天奇观和世界大观。天朗明居的5米架空与区内大面积的绿化广场、园林连缀成一体化的空间。小区道路以绿化为主，按季节色彩静心考虑树种搭配，强调四季更迭的美感和层次感，并通过绿篱与活动区相分隔。浪漫式设计，开放式园林、全城函件新生代水上会所。富力天朗明居毗邻九运会主体育场、天河公园、航天奇观和世界大观。
+                 
+            </div><div class="cl"></div> 
+           </div> 
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="whit"> <!-- 大白色背景方块 -->
+            
+            <div class="other">所有房源</div>
+            <a href="#">
+                <div class="message"style="background-color:#ffffff;">
+                    <img class="photo"style="width:55px;height:55px;"src="../resourse/imgs/31.jpeg">
+                    <div class="house-message">
+                        <div  class="jianju"style="padding-top:4px;" >
+                            <div class="house-name">富力天朗明居</div>
+                            <div class="money">￥3500元/月</div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="race"style="margin-top:0px;">
+                            <div class="list-house-width">2室1厅1卫</div>
+                            
+                            <div class="area"style=" margin-left:15px;">74m²</div>
+                            <div class="cl"></div>
+                        </div>    
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="cl"></div>
+            </a>
+
+            <a href="#">
+                <div class="message"style="background-color:#ffffff;border-bottom:0px;">
+                    <img class="photo"style="width:55px;height:55px;"src="../resourse/imgs/31.jpeg">
+                    <div class="house-message">
+                        <div  class="jianju"style="padding-top:4px;" >
+                            <div class="house-name">富力天朗明居</div>
+                            <div class="money">￥3500元/月</div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="race"style="margin-top:0px;">
+                            <div class="list-house-width">2室1厅1卫</div>
+                            
+                            <div class="area" style=" margin-left:15px;">74m²</div>
+                            <div class="cl"></div>
+                        </div>    
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="cl"></div>
+            </a>
+
+        </div>
+        
+        <div class="whit" style=" padding-bottom:0px;border-bottom:0px;"> <!-- 大白色背景方块 -->
+            <div class="other" style="border-bottom:0px;">
+                <div style="float:left;" >地图</div>
+                <div style="float:right;"> 详情  〉</div>
+                <div class="cl"></div>
+            </div>
+            <div>
+                <div style="height:250px;border-radius:0 0 5px 5px;">
+                    
+
+                    <style type="text/css">   
+                           #allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"隶书";}
+                    </style>
+                    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Iw7s9yHxbNtzaOU8mOKCAG7jOcChvm7R"></script>  <!-- 密匙 -->
+                    <div id="allmap" style="position: relative"></div>
+                    <script type="text/javascript">
+                        // 百度地图API功能
+                        var map = new BMap.Map("allmap");    // 创建Map实例
+                        map.centerAndZoom(new BMap.Point(113.52, 22.30), 11);  // 初始化地图,设置中心点坐标和地图级别
+                        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+                        map.setCurrentCity("珠海");          // 设置地图显示的城市 此项是必须设置的
+                        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                    </script>   
+                </div>  
+
+                <div style="position:absolute;margin-top:-45px;width:85%;padding:15px;color:#fff;background-color:rgba(0,0,0,0.5);border-radius:0 0 5px 5px;">骏景花园</div>   <!-- 小黑块  不能显示在上层 -->
+            </div>        
+        </div>
+</div>
+</div>
+</body>
+</html>
